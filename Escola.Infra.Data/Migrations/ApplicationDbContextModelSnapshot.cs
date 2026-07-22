@@ -35,6 +35,9 @@ namespace Escola.Infra.Data.Migrations
                         .HasMaxLength(150)
                         .HasColumnType("nvarchar(150)");
 
+                    b.Property<bool>("Excluido")
+                        .HasColumnType("bit");
+
                     b.Property<string>("Nome")
                         .IsRequired()
                         .HasMaxLength(50)
@@ -62,6 +65,9 @@ namespace Escola.Infra.Data.Migrations
                     b.Property<DateTime>("DataMatricula")
                         .HasColumnType("datetime2");
 
+                    b.Property<bool>("Excluido")
+                        .HasColumnType("bit");
+
                     b.Property<int>("TurmaId")
                         .HasColumnType("int");
 
@@ -86,6 +92,12 @@ namespace Escola.Infra.Data.Migrations
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
                     b.Property<bool>("Aprovado")
+                        .HasColumnType("bit");
+
+                    b.Property<DateTime>("DataNota")
+                        .HasColumnType("datetime2");
+
+                    b.Property<bool>("Excluido")
                         .HasColumnType("bit");
 
                     b.Property<int>("MatriculaId")
@@ -117,6 +129,9 @@ namespace Escola.Infra.Data.Migrations
                         .HasMaxLength(150)
                         .HasColumnType("nvarchar(150)");
 
+                    b.Property<bool>("Excluido")
+                        .HasColumnType("bit");
+
                     b.Property<string>("Nome")
                         .IsRequired()
                         .HasMaxLength(50)
@@ -141,6 +156,9 @@ namespace Escola.Infra.Data.Migrations
                         .IsRequired()
                         .HasMaxLength(200)
                         .HasColumnType("nvarchar(200)");
+
+                    b.Property<bool>("Excluido")
+                        .HasColumnType("bit");
 
                     b.Property<string>("Nome")
                         .IsRequired()

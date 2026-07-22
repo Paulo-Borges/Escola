@@ -14,6 +14,8 @@ namespace Escola.Domain.Entities
         public byte[] PasswordSalt { get; set; }  // pra verificar o passwordHash
         public string Perfil { get; set; } // Ex: Admin, User, etc.
 
+        public bool Excluido { get; set; } // Propriedade para indicar se o usuário foi excluído
+
         // usuario pode ter várias matriculas, então é uma relação de 1 para N
         public ICollection<Matricula> Matriculas { get; set; }
     }

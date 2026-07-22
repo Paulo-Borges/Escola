@@ -12,6 +12,7 @@ namespace Escola.Domain.Entities
         public DateTime DataMatricula { get; set; } = DateTime.Now;
         public DateTime DataExpiracao { get; set; } = DateTime.Now;
         public bool Ativo { get; set; } = true;
+        public bool Excluido { get; set; } // Propriedade para indicar se a matrícula foi excluída
 
         // Matricula pode ter várias Notas, então é uma relação de 1 para N
         public ICollection<Nota> Notas { get; set; }
